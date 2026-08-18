@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #eceff2;
+  color: #1d1f21;
+}
+
+.page {
+  width: min(100%, 640px);
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 18px 40px rgba(18, 28, 31, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+}
+
+.top-card h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.5rem, 2.2vw, 2rem);
+}
+
+.top-card p {
+  margin: 0;
+  color: #4f565e;
+  line-height: 1.6;
+}
+
+.task-form {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+#task-input {
+  flex: 1 1 220px;
+  min-width: 0;
+  padding: 1rem 1.15rem;
+  border-radius: 14px;
+  border: 1px solid #d8dde3;
+  font-size: 1rem;
+  background: #fefefe;
+  color: #1d1f21;
+}
+
+#task-input:focus {
+  outline: none;
+  border-color: #2d5f31;
+  box-shadow: 0 0 0 4px rgba(46, 112, 55, 0.12);
+}
+
+button {
+  border: none;
+  border-radius: 14px;
+  background: #235d34;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0 1.35rem;
+  min-height: 48px;
+  transition: background 0.2s ease;
+}
+
+button:hover,
+button:focus-visible {
+  background: #1f522c;
+}
+
+.tasks-card h2 {
+  margin: 0 0 1rem;
+  font-size: 1.25rem;
+}
+
+.tasks-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1rem;
+  border-radius: 16px;
+  background: #fbfdff;
+  border: 1px solid #edf2f7;
+}
+
+.task-text {
+  flex: 1;
+  margin: 0;
+  font-size: 1rem;
+  word-break: break-word;
+}
+
+.task-text.done {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.task-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.task-actions button {
+  background: #235d34;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+}
+
+.task-actions .btn-delete {
+  background: #1d4d2c;
+}
+
+.task-actions button:hover {
+  opacity: 0.95;
+}
+
+.empty-state {
+  margin: 0;
+  padding: 1rem 1rem;
+  border-radius: 14px;
+  background: #f2f4f7;
+  color: #5d636b;
+  text-align: center;
+}
+
+@media (max-width: 520px) {
+  .task-form {
+    flex-direction: column;
+  }
+
+  .task-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}

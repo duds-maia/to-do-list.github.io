@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-do List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="card top-card">
+        <div class="header-content">
+          <h1>To-do list simples</h1>
+          <p>Adicione tarefas, marque como concluídas e remova tarefas concluídas.</p>
+        </div>
+
+        <form id="task-form" class="task-form">
+          <input
+            id="task-input"
+            type="text"
+            placeholder="Digite uma nova tarefa..."
+            autocomplete="off"
+          />
+          <button type="submit">Adicionar</button>
+        </form>
+      </section>
+
+      <section class="card tasks-card">
+        <h2>Minhas tarefas</h2>
+        <ul id="tasks-list" class="tasks-list"></ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
